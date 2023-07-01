@@ -1,1 +1,3 @@
-console.log("unbelievable");
+import {renderHome} from "./home";
+
+renderHome();
