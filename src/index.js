@@ -1,5 +1,6 @@
 import "./reset.css";
 import "./fonts.css";
-import {renderHome} from "./home";
+import "./style.css";
+import {renderHomepage} from "./homepage";
 
-renderHome();
+renderHomepage();

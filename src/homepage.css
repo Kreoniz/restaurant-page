@@ -1,0 +1,42 @@
+:root {
+    --border-radius: 20px;
+}
+
+img {
+    width: 100%;
+
+    border: 2px solid black;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.description {
+    padding: 5px;
+
+    border: 2px solid black;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+
+    font-size: 1.2rem;
+    line-height: 1.25;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.schedule {
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: var(--border-radius);
+}
+
+.schedule {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.schedule-heading {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.schedule > *:not(*:last-child) {
+    margin-bottom: 10px;
+}

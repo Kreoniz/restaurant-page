@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: url("./assets/pizza_seamless.jpg") 0 0 / 200px;
+}
+
+#content {
+    font-family: "Raleway", sans-serif;
+
+    width: max(400px, 40%);
+    background-color: rgba(255, 255, 255, 0.8);
+    min-height: 100vh;
+
+    padding: 2rem;
+    margin-inline: auto;
+}
+
+#content > * {
+    text-align: center;
+}
+
+#content > *:not(*:last-child) {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
