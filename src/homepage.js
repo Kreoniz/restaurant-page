@@ -1,4 +1,5 @@
 import Pasta from "./assets/pasta.jpg";
+import Rome from "./assets/rome.jpg";
 import "./homepage.css";
 
 const content = document.querySelector("#content");
@@ -7,18 +8,16 @@ export function renderHomepage() {
     const heading = document.createElement("h1");
     const container = document.createElement("div");
     const imagePasta = new Image();
-    const descriptionText = document.createElement("span");
-    const description = document.createElement("div");
+    const description = document.createElement("p");
 
     heading.textContent = "La Bella Food";
 
     imagePasta.src = Pasta;
     imagePasta.classList.add("pasta-image");
 
-    descriptionText.textContent = "Amazing experience! If you thought gourmet kitchen will leave you hungry, think again. You should skip several meals before visiting this amazing restaurant. Everything is so tasty, you cannot restraint yourself from having all of the dishes.";
+    description.textContent = "Amazing experience! If you thought gourmet kitchen will leave you hungry, think again. You should skip several meals before visiting this amazing restaurant. Everything is so tasty, you cannot restraint yourself from having all of the dishes.";
     description.classList.add("description");
 
-    description.appendChild(descriptionText);
     content.appendChild(heading);
 
     container.appendChild(imagePasta);
@@ -27,6 +26,9 @@ export function renderHomepage() {
 
     const schedule = createSchedule();
     content.appendChild(schedule);
+    
+    const location = createLocation();
+    content.appendChild(location);
 }
 
 const scheduleObject = {
@@ -35,8 +37,8 @@ const scheduleObject = {
     "Wednesday": ["8am", "10pm"],
     "Thursday": ["8am", "10pm"],
     "Friday": ["8am", "10pm"],
-    "Saturday": ["8am", "10pm"],
-    "Sunday": ["8am", "10pm"],
+    "Saturday": ["9am", "11pm"],
+    "Sunday": ["9am", "11pm"],
 };
 
 function createSchedule() {
@@ -57,8 +59,35 @@ function createSchedule() {
 }
 
 function createScheduleItem(weekday, openTime, closeTime) {
-    const item = document.createElement("div");
+    const item = document.createElement("p");
     item.textContent = `${weekday}: ${openTime} - ${closeTime}`;
 
     return item;
+}
+
+function createLocation() {
+    const block = document.createElement("div");
+    block.classList.add("location");
+
+    const content = document.createElement("div");
+    content.classList.add("location-content");
+    const heading = document.createElement("h2");
+
+    heading.textContent = "Location";
+    heading.classList.add("location-heading");
+
+    const text = document.createElement("p");
+    text.textContent = "You can find our restaurants anywhere in Rome!";
+
+    const image = new Image();
+    image.src = Rome;
+    image.classList.add("location-image");
+
+    content.appendChild(heading);
+    content.appendChild(text);
+    block.appendChild(content);
+
+    block.appendChild(image);
+
+    return block;
 }

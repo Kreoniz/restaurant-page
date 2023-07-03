@@ -11,7 +11,7 @@ body {
 #content {
     font-family: "Raleway", sans-serif;
 
-    width: max(400px, 40%);
+    width: clamp(400px, 60%, 700px);
     background-color: rgba(255, 255, 255, 0.8);
     min-height: 100vh;
 
@@ -24,10 +24,21 @@ body {
 }
 
 #content > *:not(*:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 h1 {
     font-size: 3rem;
     font-weight: 700;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 5vw, 2rem);
+    font-weight: 700;
+}
+
+p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    font-weight: 500;
+    line-height: 1.25;
 }
