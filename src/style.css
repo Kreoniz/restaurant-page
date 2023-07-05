@@ -19,11 +19,11 @@ body {
     margin-inline: auto;
 }
 
-#content > * {
+.page > * {
     text-align: center;
 }
 
-#content > *:not(*:last-child) {
+.page > *:not(*:last-child) {
     margin-bottom: 1.5rem;
 }
 

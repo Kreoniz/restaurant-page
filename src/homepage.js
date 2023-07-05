@@ -3,6 +3,8 @@ import Rome from "./assets/rome.jpg";
 import "./homepage.css";
 
 const content = document.querySelector("#content");
+const homepage = document.createElement("div");
+homepage.classList.add("page");
 
 export function renderHomepage() {
     const heading = document.createElement("h1");
@@ -18,17 +20,19 @@ export function renderHomepage() {
     description.textContent = "Amazing experience! If you thought gourmet kitchen will leave you hungry, think again. You should skip several meals before visiting this amazing restaurant. Everything is so tasty, you cannot restraint yourself from having all of the dishes.";
     description.classList.add("description");
 
-    content.appendChild(heading);
+    homepage.appendChild(heading);
 
     container.appendChild(imagePasta);
     container.appendChild(description);
-    content.appendChild(container);
+    homepage.appendChild(container);
 
     const schedule = createSchedule();
-    content.appendChild(schedule);
+    homepage.appendChild(schedule);
     
     const location = createLocation();
-    content.appendChild(location);
+    homepage.appendChild(location);
+
+    content.appendChild(homepage);
 }
 
 const scheduleObject = {

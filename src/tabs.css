@@ -1,0 +1,20 @@
+.tabs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 20px;
+
+    transition: .5s ease;
+}
+
+.tab:hover {
+    cursor: pointer;
+}
+
+.active-tab {
+    background-color: lightgreen;
+}
