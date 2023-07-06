@@ -1,14 +1,10 @@
-:root {
-    --border-radius: 20px;
-}
-
 img {
     display: block;
     width: 100%;
 }
 
 .pasta-image {
-    border: 2px solid black;
+    border: var(--border);
     border-bottom: none;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
@@ -16,7 +12,7 @@ img {
 .description {
     padding: 10px;
 
-    border: 2px solid black;
+    border: var(--border);
     border-radius: 0 0 var(--border-radius) var(--border-radius);
 
     font-style: italic;
@@ -24,7 +20,7 @@ img {
 
 .schedule {
     padding: 1rem;
-    border: 2px solid black;
+    border: var(--border);
     border-radius: var(--border-radius);
 }
 
@@ -36,20 +32,21 @@ img {
     margin-bottom: 10px;
 }
 
+/*
 .location-image {
     border-radius: 0 0 var(--border-radius) var(--border-radius);
-    border: 2px solid black;
+    border: var(--border);
     border-top: none;
 }
 
 .location-content {
     padding: 10px 10px 0;
 
-    border: 2px solid black;
+    border: var(--border);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .location-content > * {
     margin-bottom: 10px;
 }
-
+*/

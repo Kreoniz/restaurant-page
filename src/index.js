@@ -33,13 +33,12 @@ const tabObject = {
     "contact": renderContact,
 };
 
-
 tabArray.forEach(tab => {
     tab.addEventListener("click", e => {
         tabArray.forEach(tab => tab.classList.remove("active-tab"));
         tab.classList.add("active-tab");
         const data = tab.dataset.content;
-        document.querySelector(".page").textContent = "";
+        document.querySelector("#page").textContent = "";
         tabObject[data]();
     });
 });
@@ -49,6 +48,11 @@ tabs.appendChild(menuTab);
 tabs.appendChild(contactTab);
 
 content.appendChild(tabs);
+
+const page = document.createElement("div");
+page.classList.add("page");
+page.setAttribute("id", "page");
+content.appendChild(page);
 
 homepageTab.classList.add("active-tab");
 renderHomepage();

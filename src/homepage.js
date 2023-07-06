@@ -1,12 +1,11 @@
 import Pasta from "./assets/pasta.jpg";
 import Rome from "./assets/rome.jpg";
 import "./homepage.css";
-
-const content = document.querySelector("#content");
-const homepage = document.createElement("div");
-homepage.classList.add("page");
+import {createCard} from "./card";
 
 export function renderHomepage() {
+    const homepage = document.querySelector("#page");
+
     const heading = document.createElement("h1");
     const container = document.createElement("div");
     const imagePasta = new Image();
@@ -29,10 +28,8 @@ export function renderHomepage() {
     const schedule = createSchedule();
     homepage.appendChild(schedule);
     
-    const location = createLocation();
+    const location = createCard("Location", "You can find our restaurants anywhere in Rome!", Rome);
     homepage.appendChild(location);
-
-    content.appendChild(homepage);
 }
 
 const scheduleObject = {
@@ -70,11 +67,11 @@ function createScheduleItem(weekday, openTime, closeTime) {
 }
 
 function createLocation() {
-    const block = document.createElement("div");
-    block.classList.add("location");
+    const card = document.createElement("div");
+    card.classList.add("location");
 
     const content = document.createElement("div");
-    content.classList.add("location-content");
+    content.classList.add("card-info");
     const heading = document.createElement("h2");
 
     heading.textContent = "Location";
@@ -85,13 +82,13 @@ function createLocation() {
 
     const image = new Image();
     image.src = Rome;
-    image.classList.add("location-image");
+    image.classList.add("location-image", "card-image");
 
     content.appendChild(heading);
     content.appendChild(text);
-    block.appendChild(content);
+    card.appendChild(content);
 
-    block.appendChild(image);
+    card.appendChild(image);
 
-    return block;
+    return card;
 }

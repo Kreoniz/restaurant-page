@@ -1,0 +1,17 @@
+/*
+.meal-image {
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    border: var(--border);
+    border-top: none;
+}
+
+.meal-info {
+    padding: 10px 10px 0;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    border: var(--border);
+}
+
+.meal-info > * {
+    margin-bottom: 10px;
+}
+*/
