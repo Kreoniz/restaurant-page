@@ -1,4 +1,3 @@
-import "./menu.css";
 import Pasta from "./assets/meals/pasta.jpg";
 import Bruschetta from "./assets/meals/bruschetta.jpg";
 import Margherita from "./assets/meals/margherita.jpg";

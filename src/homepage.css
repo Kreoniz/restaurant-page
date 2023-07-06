@@ -31,22 +31,3 @@ img {
 .schedule-heading {
     margin-bottom: 10px;
 }
-
-/*
-.location-image {
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
-    border: var(--border);
-    border-top: none;
-}
-
-.location-content {
-    padding: 10px 10px 0;
-
-    border: var(--border);
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
-}
-
-.location-content > * {
-    margin-bottom: 10px;
-}
-*/
