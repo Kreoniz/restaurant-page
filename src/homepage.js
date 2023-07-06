@@ -1,7 +1,7 @@
+import {createCard} from "./card";
+import "./homepage.css";
 import Pasta from "./assets/pasta.jpg";
 import Rome from "./assets/rome.jpg";
-import "./homepage.css";
-import {createCard} from "./card";
 
 export function renderHomepage() {
     const homepage = document.querySelector("#page");
@@ -44,7 +44,7 @@ const scheduleObject = {
 
 function createSchedule() {
     const schedule = document.createElement("div");
-    const scheduleHeading = document.createElement("h2");
+    const scheduleHeading = document.createElement("h3");
 
     schedule.classList.add("schedule");
     scheduleHeading.textContent = "Working Hours";

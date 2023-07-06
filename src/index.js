@@ -13,17 +13,14 @@ tabs.classList.add("tabs");
 
 const homepageTab = document.createElement("li");
 homepageTab.textContent = "Home";
-homepageTab.classList.add("tab");
 homepageTab.dataset.content = "homepage";
 
 const menuTab = document.createElement("li");
 menuTab.textContent = "Menu";
-menuTab.classList.add("tab");
 menuTab.dataset.content = "menu";
 
 const contactTab = document.createElement("li");
 contactTab.textContent = "Contact";
-contactTab.classList.add("tab");
 contactTab.dataset.content = "contact";
 
 const tabArray = [homepageTab, menuTab, contactTab];
@@ -34,7 +31,8 @@ const tabObject = {
 };
 
 tabArray.forEach(tab => {
-    tab.addEventListener("click", e => {
+    tab.classList.add("tab");
+    tab.addEventListener("click", () => {
         tabArray.forEach(tab => tab.classList.remove("active-tab"));
         tab.classList.add("active-tab");
         const data = tab.dataset.content;

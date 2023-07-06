@@ -5,7 +5,7 @@ export function createCard(title, text, image) {
     const cardInfo = document.createElement("div");
     cardInfo.classList.add("card-info");
 
-    const cardHeading = document.createElement("h2");
+    const cardHeading = document.createElement("h3");
     cardHeading.textContent = title;
     cardHeading.classList.add("card-heading");
 
