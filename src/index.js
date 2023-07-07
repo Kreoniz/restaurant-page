@@ -5,8 +5,14 @@ import "./tabs.css";
 import {renderHomepage} from "./homepage";
 import {renderMenu} from "./menu";
 import {renderContact} from "./contact";
+import Favicon from "./assets/italy_favicon.png";
 
 const content = document.querySelector("#content");
+
+const iconLink = document.createElement("link");
+iconLink.rel = "icon";
+iconLink.href = Favicon;
+document.head.appendChild(iconLink);
 
 const tabs = document.createElement("ul");
 tabs.classList.add("tabs");

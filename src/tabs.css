@@ -31,6 +31,11 @@
 
 .active-tab {
     background: url("./assets/flag_of_italy.png") 50% / cover no-repeat;
+    text-shadow:
+        -1px -1px #fff,
+        1px 1px #fff,
+        1px -1px #fff,
+        -1px 1px #fff;
 }
 
 .tab:hover {

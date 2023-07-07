@@ -47,6 +47,9 @@ const menu = {
 export function renderMenu() {
     const menupage = document.querySelector("#page");
     menupage.classList.add("menu-page");
+    const menupageHeading = document.createElement("h1");
+    menupageHeading.textContent = "Menu";
+    menupage.appendChild(menupageHeading);
 
     for (const type in menu) {
         const section = document.createElement("div");
