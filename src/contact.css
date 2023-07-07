@@ -1,0 +1,15 @@
+.contact-info {
+    border: var(--border);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    padding: 1rem;
+}
+
+.contact > img {
+    border: var(--border);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    border-top: none;
+}
+
+.contact-email:hover {
+    text-decoration: underline;
+}
